@@ -1,0 +1,47 @@
+part of 'app_pages.dart';
+
+abstract class Routes {
+  static const splash = '/';
+  static const registrationScreen = '/registrationScreen';
+  static const registerTwoScreen = '/registerTwoScreen';
+  static const registerThreeScreen = '/registerThreeScreen';
+  static const login = '/login';
+  static const homeScreen = '/homeScreen';
+  static const personalApplicationScreen = '/personalApplicationScreen';
+  static const businessApplicationScreen = '/businessApplicationScreen';
+  static const personalAddressDetailsScreen = '/personalAddressDetailsScreen';
+  static const personalEmploymentIncomeScreen = '/personalEmploymentIncomeScreen';
+  static const personalDocumentUploadScreen = '/personalDocumentUploadScreen';
+  static const personalReviewSubmitScreen = '/personalReviewSubmitScreen';
+  static const mobileVerificationScreen = '/mobileVerificationScreen';
+  static const cibilScreen = '/cibilScreen';
+  static const homeApplicationScreen = '/homeApplicationScreen';
+  static const personalApplicationSuccessScreen = '/personalApplicationSuccessScreen';
+  static const businessAddressDetailsScreen = '/businessAddressDetailsScreen';
+  static const businessEmploymentIncomeScreen = '/businessEmploymentIncomeScreen';
+  static const businessDocumentUploadScreen = '/businessDocumentUploadScreen';
+  static const businessReviewSubmitScreen = '/businessReviewSubmitScreen';
+  static const businessApplicationSuccessScreen = '/businessApplicationSuccessScreen';
+  static const homeLoanDetailsScreen = '/homeLoanDetailsScreen';
+  static const homeLoanDocumentUploadScreen = '/homeLoanDocumentUploadScreen';
+  static const homeLoanSubmitScreen = '/homeLoanSubmitScreen';
+  static const supportScreen = '/supportScreen';
+  static const loansScreen = '/loansScreen';
+  static const profileScreen = '/profileScreen';
+  static const transferScreen = '/transferScreen';
+  static const payScreen = '/payScreen';
+  static const topUpScreen = '/topUpScreen';
+  static const applyLoanScreen = '/applyLoanScreen';
+  static const carOptionScreen = '/carOptionScreen';
+  static const newCarApplicationScreen = '/newCarApplicationScreen';
+  static const oldCarApplicationScreen = '/oldCarApplicationScreen';
+  static const newCarAddressDetailsScreen = '/newCarAddressDetailsScreen';
+  static const newCarDocumentUploadScreen = '/newCarDocumentUploadScreen';
+  static const newCarApplicationSubmittedScreen = '/newCarApplicationSubmittedScreen';
+  static const oldCarAddressDetailsScreen = '/oldCarAddressDetailsScreen';
+  static const oldCarDocumentUploadScreen = '/oldCarDocumentUploadScreen';
+  static const oldCarApplicationSubmittedScreen = '/oldCarApplicationSubmittedScreen';
+  static const instantLoanApplicationScreen = '/instantLoanApplicationScreen';
+  static const instantLoanAddressDetailsScreen = '/instantLoanAddressDetailsScreen';
+  static const loanDetailsScreen = '/loan-details';
+}

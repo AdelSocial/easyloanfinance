@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "684757831944",
+    "project_id": "easyloanfinance-49b4a",
+    "storage_bucket": "easyloanfinance-49b4a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684757831944:android:1209e3a91cb572120d1cbd",
+        "android_client_info": {
+          "package_name": "com.example.easy_loan_finance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "684757831944-2s45qie7slmmsb7fk3elng8u3ph51lvo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.easy_loan_finance",
+            "certificate_hash": "042ad165404817fd2328a22c4a8c32024d1c913c"
+          }
+        },
+        {
+          "client_id": "684757831944-8teqlgersf4j6ts2932htc90ts88v88e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxotiqucAB-TF8ccKlvimL3zViyqM5XnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "684757831944-8teqlgersf4j6ts2932htc90ts88v88e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "684757831944-9vj3e664qen78glm8gutmtptodt9daea.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.easyLoanFinance"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
