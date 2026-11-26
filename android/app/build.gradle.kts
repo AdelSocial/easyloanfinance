@@ -1,3 +1,6 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     id("com.android.application")
     // START: FlutterFire Configuration
@@ -7,6 +10,18 @@ plugins {
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
+
+// Release signing: Codemagic injects CM_KEYSTORE_* env vars from the uploaded keystore.
+// Locally, put the same values in android/key.properties (never commit it).
+val keystoreProperties = Properties().apply {
+    val f = rootProject.file("key.properties")
+    if (f.exists()) load(FileInputStream(f))
+}
+val releaseStoreFile: String? = System.getenv("CM_KEYSTORE_PATH") ?: keystoreProperties.getProperty("storeFile")
+val releaseStorePassword: String? = System.getenv("CM_KEYSTORE_PASSWORD") ?: keystoreProperties.getProperty("storePassword")
+val releaseKeyAlias: String? = System.getenv("CM_KEY_ALIAS") ?: keystoreProperties.getProperty("keyAlias")
+val releaseKeyPassword: String? = System.getenv("CM_KEY_PASSWORD") ?: keystoreProperties.getProperty("keyPassword")
+val hasReleaseKey = !releaseStoreFile.isNullOrBlank() && file(releaseStoreFile!!).exists()
 
 android {
     namespace = "com.example.easy_loan_finance"
@@ -33,11 +48,22 @@ android {
         versionName = flutter.versionName
     }
 
+    signingConfigs {
+        if (hasReleaseKey) {
+            create("release") {
+                storeFile = file(releaseStoreFile!!)
+                storePassword = releaseStorePassword
+                keyAlias = releaseKeyAlias
+                keyPassword = releaseKeyPassword
+            }
+        }
+    }
+
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            // Permanent release key (its SHA-1/SHA-256 are registered in Firebase for Google Sign-In).
+            // Falls back to the debug key only when no keystore is configured.
+            signingConfig = if (hasReleaseKey) signingConfigs.getByName("release") else signingConfigs.getByName("debug")
         }
     }
 }
