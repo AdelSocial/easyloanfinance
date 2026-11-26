@@ -50,11 +50,11 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDxotiqucAB-TF8ccKlvimL3zViyqM5XnU',
-    appId: '1:684757831944:android:1209e3a91cb572120d1cbd',
-    messagingSenderId: '684757831944',
-    projectId: 'easyloanfinance-49b4a',
-    storageBucket: 'easyloanfinance-49b4a.firebasestorage.app',
+    apiKey: 'AIzaSyDXfbEyJcNoM0I4F98saT-CWpIPeyKxwUQ',
+    appId: '1:486245276906:android:96f9408131685885790b93',
+    messagingSenderId: '486245276906',
+    projectId: 'easy-loan-finance-32bb5',
+    storageBucket: 'easy-loan-finance-32bb5.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
